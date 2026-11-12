@@ -1,0 +1,42 @@
+# Dependências
+node_modules/
+**/node_modules/
+.pnpm-store/
+
+# Ambientes Python / Virtualenvs
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Builds, Caches e Artefatos
+dist/
+build/
+coverage/
+.next/
+.expo/
+.turbo/
+.cache/
+target/
+out/
+
+# Logs e Arquivos Temporários
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+tmp/
+temp/
+
+# Variáveis de Ambiente e Segredos
+.env
+.env.*
+!.env.example
+
+# Sistema Operacional e IDEs
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

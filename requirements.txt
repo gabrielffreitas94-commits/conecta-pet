@@ -1,0 +1,2 @@
+# Conecta Pet utiliza a biblioteca padrão do Python 3.10+ (sqlite3, http.server, threading, queue, uuid, unittest)
+# Zero dependências externas obrigatórias para garantir execução 100% determinística em ambientes offline.

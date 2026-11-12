@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conecta-pet"
+version = "1.0.0"
+description = "Conecta Pet - Plataforma em Python estilo iFood/Uber conectando Tutores e Veterinários (Consultório, Domicílio e Online)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

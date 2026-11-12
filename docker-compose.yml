@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  postgres-postgis:
+    image: postgis/postgis:16-3.4-alpine
+    container_name: conecta_pet_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: conecta_pet
+      POSTGRES_PASSWORD: conecta_pet_secret
+      POSTGRES_DB: conecta_pet_prod
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./conecta_pet/db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+
+  redis-cluster:
+    image: redis:7.2-alpine
+    container_name: conecta_pet_redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+
+volumes:
+  pgdata:
+  redisdata:
