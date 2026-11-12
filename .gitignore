@@ -3,11 +3,19 @@ node_modules/
 **/node_modules/
 .pnpm-store/
 
-# Ambientes Python / Virtualenvs
+# Ambientes Python / Virtualenvs / Caches de Testes e Build
 .venv/
 venv/
 __pycache__/
+**/__pycache__/
 *.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
 # Builds, Caches e Artefatos
 dist/
